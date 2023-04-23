@@ -19,10 +19,10 @@
       referrerpolicy="no-referrer"
     />
     <link href="./css/styles.css" rel="stylesheet" />
+    <link href="./css/media.css" rel="stylesheet" />
   </head>
   <body>
     <!-------------------------HEADER------------------------>
-
     <header class="header">
       <div class="container header-container">
         <nav class="header-navigation">
@@ -63,11 +63,94 @@
             </li>
           </ul>
         </address>
+        <button type="button" class="open-btn-menu" data-menu-open>
+          <svg class="open-btn-icon" width="32" height="22">
+            <use href="./images/icons/icons.svg#icon-hamburger-men"></use>
+          </svg>
+        </button>
+      </div>
+      <div class="mobile-menu is-hidden" data-menu>
+        <div class="mobile-container">
+          <div>
+            <button type="button" class="menu-close-btn" data-menu-close>
+              <svg class="menu-close-btn-icon" width="8" height="8">
+                <use href="./images/icons/icons.svg#icon-close-black"></use>
+              </svg>
+            </button>
+            <nav class="mobile-menu-navigation">
+              <ul class="mobile-menu-list list">
+                <li class="mobile-menu-item">
+                  <a
+                    class="mobile-menu-link link current-mobile"
+                    href="./index.html"
+                    >Studio</a
+                  >
+                </li>
+                <li class="mobile-menu-item">
+                  <a class="mobile-menu-link link" href="./portfolio.html"
+                    >Portfolio</a
+                  >
+                </li>
+                <li class="mobile-menu-item">
+                  <a class="mobile-menu-link link" href="">Contacts</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div>
+            <address class="mobile-menu-address">
+              <ul class="mobile-menu-address-list list">
+                <li class="mobile-menu-address-item">
+                  <a
+                    class="mobile-menu-address-link menu-number link"
+                    href="tel:+110001111111"
+                    >+11 (000) 111-11-11</a
+                  >
+                </li>
+                <li class="mobile-menu-address-item">
+                  <a
+                    class="mobile-menu-address-link menu-mail link"
+                    href="mailto:info@devstudio.com"
+                    >info@devstudio.com</a
+                  >
+                </li>
+              </ul>
+            </address>
+            <ul class="menu-social-list list">
+              <li class="menu-social-item">
+                <a class="menu-social-link" href="">
+                  <svg class="menu-social-icon" width="16" height="16">
+                    <use href="./images/icons/icons.svg#icon-instagram"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="menu-social-item">
+                <a class="menu-social-link" href="">
+                  <svg class="menu-social-icon" width="16" height="16">
+                    <use href="./images/icons/icons.svg#icon-twitter"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="menu-social-item">
+                <a class="menu-social-link" href="">
+                  <svg class="menu-social-icon" width="16" height="16">
+                    <use href="./images/icons/icons.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="menu-social-item">
+                <a class="menu-social-link" href="">
+                  <svg class="menu-social-icon" width="16" height="16">
+                    <use href="./images/icons/icons.svg#icon-linkedin"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </header>
-
     <!----------------------------HERO------------------------------>
-
     <main>
       <section class="hero">
         <div class="container hero-container">
@@ -77,9 +160,7 @@
           </button>
         </div>
       </section>
-
       <!----------------------------ABOUT------------------------------>
-
       <section class="about">
         <div class="container container-about">
           <h2 class="about-hidden-title visually-hidden">About us</h2>
@@ -127,9 +208,7 @@
           </ul>
         </div>
       </section>
-
       <!----------------------------GALLERY------------------------------>
-
       <section class="gallery">
         <div class="container gallery-container">
           <h2 class="gallery-title section-title">What are we doing</h2>
@@ -138,6 +217,7 @@
               <img
                 class="gallery-img"
                 src="./images/sec-doing/img-1.jpg"
+                srcset="./images/sec-doing/img-1-2x.jpg 2x"
                 alt="computer"
               />
             </li>
@@ -145,6 +225,7 @@
               <img
                 class="gallery-img"
                 src="./images/sec-doing/img-2.jpg"
+                srcset="./images/sec-doing/img-2-2x.jpg 2x"
                 alt="mobile phone"
               />
             </li>
@@ -152,15 +233,14 @@
               <img
                 class="gallery-img"
                 src="./images/sec-doing/img-3.jpg"
+                srcset="./images/sec-doing/img-3-2x.jpg 2x"
                 alt="computer and mobile phone"
               />
             </li>
           </ul>
         </div>
       </section>
-
       <!----------------------------TEAM------------------------------>
-
       <section class="team">
         <div class="container container-team">
           <h2 class="team-top-title section-title">Our Team</h2>
@@ -169,7 +249,10 @@
               <img
                 class="team-img"
                 src="./images/sec-team/mark.jpg"
+                srcset="./images/sec-team/mark-2x.jpg 2x"
                 alt="man"
+                width="264"
+                height="260"
               />
               <div class="team-wrapper">
                 <h3 class="team-subtitle main-subtitle-text">Mark Guerrero</h3>
@@ -213,7 +296,14 @@
               </div>
             </li>
             <li class="team-item">
-              <img class="team-img" src="./images/sec-team/tom.jpg" alt="man" />
+              <img
+                class="team-img"
+                src="./images/sec-team/tom.jpg"
+                srcset="./images/sec-team/tom-2x.jpg 2x"
+                alt="man"
+                width="264"
+                height="260"
+              />
               <div class="team-wrapper">
                 <h3 class="team-subtitle main-subtitle-text">Tom Ford</h3>
                 <p class="team-item-text">Frontend Developer</p>
@@ -259,7 +349,10 @@
               <img
                 class="team-img"
                 src="./images/sec-team/camila.jpg"
+                srcset="./images/sec-team/camila-2x.jpg 2x"
                 alt="woman"
+                width="264"
+                height="260"
               />
               <div class="team-wrapper">
                 <h3 class="team-subtitle main-subtitle-text">Camila Garcia</h3>
@@ -306,7 +399,10 @@
               <img
                 class="team-img"
                 src="./images/sec-team/daniel.jpg"
+                srcset="./images/sec-team/daniel-2x.jpg 2x"
                 alt="man"
+                width="264"
+                height="260"
               />
               <div class="team-wrapper">
                 <h3 class="team-subtitle main-subtitle-text">Daniel Wilson</h3>
@@ -352,7 +448,6 @@
           </ul>
         </div>
       </section>
-
       <!----------------------------CUSTOMERS------------------------------>
       <section class="customers">
         <div class="container container-customers">
@@ -392,7 +487,6 @@
         </div>
       </section>
     </main>
-
     <!----------------------------FOOTER------------------------------>
 
     <footer class="footer">
@@ -554,5 +648,6 @@
       </div>
     </div>
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>
