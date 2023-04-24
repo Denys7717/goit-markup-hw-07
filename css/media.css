@@ -225,6 +225,8 @@
   .project-sorting {
     padding-top: 64px;
     padding-bottom: 96px;
+    padding-left: 0;
+    padding-right: 0;
   }
   .project-sorting-btn {
     padding: 12px 24px;

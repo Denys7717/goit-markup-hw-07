@@ -121,6 +121,10 @@ img {
   display: none;
 }
 
+.header {
+  border-bottom: 1px solid var(--border-color);
+}
+
 .open-btn-menu {
   background-color: transparent;
   border: none;
@@ -139,7 +143,6 @@ img {
   align-items: center;
   padding-top: 24px;
   padding-bottom: 24px;
-  border-bottom: 1px solid var(--border-color);
 }
 
 .full-logotype {
